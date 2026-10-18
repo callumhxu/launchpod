@@ -14,6 +14,10 @@
 
 Launchpod 带回你熟悉的全屏 App 网格。按页面和文件夹整理 App，一眼找到想用的，或者输入名字快速搜索。它是用 Swift、AppKit 和 Core Animation 开发的原生 Mac App，打开迅速、动画流畅，用起来就像系统自带的一样。
 
+![Launchpod 演示：App 网格、搜索和文件夹](assets/launchpod-demo.gif)
+
+[查看 MP4 演示](assets/launchpod-demo.mp4)
+
 **[下载最新版本](https://github.com/callumhxu/launchpod/releases/latest)**
 
 ## 功能

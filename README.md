@@ -14,6 +14,10 @@
 
 Launchpod brings back the familiar full-screen grid of your apps. Arrange them in pages and folders, then find what you need at a glance or with a quick search. It is a native Mac app, built with Swift, AppKit, and Core Animation, so it opens instantly, animates smoothly, and feels right at home on your Mac.
 
+![Launchpod demo: app grid, search, and folders](assets/launchpod-demo.gif)
+
+[Watch the MP4 demo](assets/launchpod-demo.mp4)
+
 **[Download the latest release](https://github.com/callumhxu/launchpod/releases/latest)**
 
 ## Features
