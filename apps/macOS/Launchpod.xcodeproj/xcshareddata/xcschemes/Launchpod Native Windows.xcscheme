@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme LastUpgradeVersion="2700" version="1.3">
+   <BuildAction parallelizeBuildables="YES" buildImplicitDependencies="YES">
+      <BuildActionEntries>
+         <BuildActionEntry buildForTesting="YES" buildForRunning="YES" buildForProfiling="YES" buildForArchiving="YES" buildForAnalyzing="YES">
+            <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="0E40E03C305F90FB00A3C06E" BuildableName="Launchpod.app" BlueprintName="Launchpod" ReferencedContainer="container:Launchpod.xcodeproj"/>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction buildConfiguration="Debug" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier="Xcode.IDEFoundation.Launcher.LLDB" shouldUseLaunchSchemeArgsEnv="NO">
+      <EnvironmentVariables>
+         <EnvironmentVariable key="LAUNCHPOD_UNIT_TEST_HOST" value="1" isEnabled="YES"/>
+         <EnvironmentVariable key="LAUNCHPOD_NATIVE_WINDOW_TESTS" value="1" isEnabled="YES"/>
+      </EnvironmentVariables>
+      <Testables>
+         <TestableReference skipped="NO" parallelizable="NO">
+            <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="0E40E049305F90FD00A3C06E" BuildableName="LaunchpodTests.xctest" BlueprintName="LaunchpodTests" ReferencedContainer="container:Launchpod.xcodeproj"/>
+            <SelectedTests>
+               <Test Identifier="GeneralSettingsViewTests"/>
+            </SelectedTests>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction buildConfiguration="Debug" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier="Xcode.IDEFoundation.Launcher.LLDB" launchStyle="0" useCustomWorkingDirectory="NO" ignoresPersistentStateOnLaunch="NO" debugDocumentVersioning="YES" debugServiceExtension="internal" allowLocationSimulation="YES">
+      <BuildableProductRunnable runnableDebuggingMode="0"><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="0E40E03C305F90FB00A3C06E" BuildableName="Launchpod.app" BlueprintName="Launchpod" ReferencedContainer="container:Launchpod.xcodeproj"/></BuildableProductRunnable>
+   </LaunchAction>
+   <ProfileAction buildConfiguration="Release" shouldUseLaunchSchemeArgsEnv="YES" savedToolIdentifier="" useCustomWorkingDirectory="NO" debugDocumentVersioning="YES">
+      <BuildableProductRunnable runnableDebuggingMode="0"><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="0E40E03C305F90FB00A3C06E" BuildableName="Launchpod.app" BlueprintName="Launchpod" ReferencedContainer="container:Launchpod.xcodeproj"/></BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction buildConfiguration="Debug"/>
+   <ArchiveAction buildConfiguration="Release" revealArchiveInOrganizer="YES"/>
+</Scheme>

@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000603070000000D0C001 /* CatalogTestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000613070000000D0C001 /* CatalogTestSupport.swift */; };
+		A10000023070000000D0C001 /* Launchpod/Shared/Application/ApplicationIconDockContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000113070000000D0C001 /* Launchpod/Shared/Application/ApplicationIconDockContract.swift */; };
+		A10000043070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconColorGrid.imageset/ApplicationIconColorGrid.png in Resources */ = {isa = PBXBuildFile; fileRef = A10000133070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconColorGrid.imageset/ApplicationIconColorGrid.png */; };
+		A10000053070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconDarkGrid.imageset/ApplicationIconDarkGrid.png in Resources */ = {isa = PBXBuildFile; fileRef = A10000143070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconDarkGrid.imageset/ApplicationIconDarkGrid.png */; };
+		A10000063070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconRocket.imageset/ApplicationIconRocket.png in Resources */ = {isa = PBXBuildFile; fileRef = A10000153070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconRocket.imageset/ApplicationIconRocket.png */; };
+		A10000073070000000D0C001 /* LaunchpodDockTile.docktileplugin in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = A10000103070000000D0C001 /* LaunchpodDockTile.docktileplugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A10000313070000000D0C001 /* LaunchpodDockTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000323070000000D0C001 /* LaunchpodDockTile.swift */; };
+		A10000333070000000D0C001 /* LaunchpodDockTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000323070000000D0C001 /* LaunchpodDockTile.swift */; };
+		A10000343070000000D0C001 /* Launchpod/Shared/Application/ApplicationIconDockContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000113070000000D0C001 /* Launchpod/Shared/Application/ApplicationIconDockContract.swift */; };
+		A10000503070000000D0C001 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = A10000523070000000D0C001 /* Sparkle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0E40E04B305F90FD00A3C06E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E40E035305F90FB00A3C06E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E40E03C305F90FB00A3C06E;
+			remoteInfo = Launchpod;
+		};
+		0E40E055305F90FD00A3C06E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E40E035305F90FB00A3C06E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E40E03C305F90FB00A3C06E;
+			remoteInfo = Launchpod;
+		};
+		A10000083070000000D0C001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E40E035305F90FB00A3C06E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10000243070000000D0C001;
+			remoteInfo = LaunchpodDockTile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A10000233070000000D0C001 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				A10000073070000000D0C001 /* LaunchpodDockTile.docktileplugin in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A10000613070000000D0C001 /* CatalogTestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpodTests/Support/CatalogTestSupport.swift; sourceTree = SOURCE_ROOT; };
+		0E40E03D305F90FB00A3C06E /* Launchpod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Launchpod.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E40E04A305F90FD00A3C06E /* LaunchpodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaunchpodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E40E054305F90FD00A3C06E /* LaunchpodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaunchpodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000103070000000D0C001 /* LaunchpodDockTile.docktileplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaunchpodDockTile.docktileplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000113070000000D0C001 /* Launchpod/Shared/Application/ApplicationIconDockContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launchpod/Shared/Application/ApplicationIconDockContract.swift; sourceTree = SOURCE_ROOT; };
+		A10000133070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconColorGrid.imageset/ApplicationIconColorGrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launchpod/Assets.xcassets/ApplicationIconColorGrid.imageset/ApplicationIconColorGrid.png; sourceTree = SOURCE_ROOT; };
+		A10000143070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconDarkGrid.imageset/ApplicationIconDarkGrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launchpod/Assets.xcassets/ApplicationIconDarkGrid.imageset/ApplicationIconDarkGrid.png; sourceTree = SOURCE_ROOT; };
+		A10000153070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconRocket.imageset/ApplicationIconRocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launchpod/Assets.xcassets/ApplicationIconRocket.imageset/ApplicationIconRocket.png; sourceTree = SOURCE_ROOT; };
+		A10000323070000000D0C001 /* LaunchpodDockTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpodDockTile.swift; sourceTree = "<group>"; };
+		A10000403070000000D0C001 /* Launchpod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Launchpod.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A10000293070000000D0C001 /* Exceptions for "Launchpod" folder in "Launchpod" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				App/Info.plist,
+			);
+			target = 0E40E03C305F90FB00A3C06E /* Launchpod */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0E40E03F305F90FB00A3C06E /* Launchpod */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A10000293070000000D0C001 /* Exceptions for "Launchpod" folder in "Launchpod" target */,
+			);
+			path = Launchpod;
+			sourceTree = "<group>";
+		};
+		0E40E04D305F90FD00A3C06E /* LaunchpodTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LaunchpodTests;
+			sourceTree = "<group>";
+		};
+		0E40E057305F90FD00A3C06E /* LaunchpodUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LaunchpodUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E40E03A305F90FB00A3C06E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				A10000503070000000D0C001 /* Sparkle in Frameworks */,
+			);
+		};
+		0E40E047305F90FD00A3C06E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		0E40E051305F90FD00A3C06E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		A10000213070000000D0C001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E40E034305F90FB00A3C06E = {
+			isa = PBXGroup;
+			children = (
+				A10000413070000000D0C001 /* Configuration */,
+				0E40E03F305F90FB00A3C06E /* Launchpod */,
+				A10000303070000000D0C001 /* Extensions */,
+				0E40E04D305F90FD00A3C06E /* LaunchpodTests */,
+				0E40E057305F90FD00A3C06E /* LaunchpodUITests */,
+				0E40E03E305F90FB00A3C06E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0E40E03E305F90FB00A3C06E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E40E03D305F90FB00A3C06E /* Launchpod.app */,
+				A10000103070000000D0C001 /* LaunchpodDockTile.docktileplugin */,
+				0E40E04A305F90FD00A3C06E /* LaunchpodTests.xctest */,
+				0E40E054305F90FD00A3C06E /* LaunchpodUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A10000163070000000D0C001 /* DockTile */ = {
+			isa = PBXGroup;
+			children = (
+				A10000323070000000D0C001 /* LaunchpodDockTile.swift */,
+				A10000113070000000D0C001 /* Launchpod/Shared/Application/ApplicationIconDockContract.swift */,
+				A10000173070000000D0C001 /* Resources */,
+			);
+			path = DockTile;
+			sourceTree = "<group>";
+		};
+		A10000173070000000D0C001 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A10000133070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconColorGrid.imageset/ApplicationIconColorGrid.png */,
+				A10000143070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconDarkGrid.imageset/ApplicationIconDarkGrid.png */,
+				A10000153070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconRocket.imageset/ApplicationIconRocket.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A10000303070000000D0C001 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A10000163070000000D0C001 /* DockTile */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A10000413070000000D0C001 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				A10000403070000000D0C001 /* Launchpod.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E40E03C305F90FB00A3C06E /* Launchpod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E40E05C305F90FD00A3C06E /* Build configuration list for PBXNativeTarget "Launchpod" */;
+			buildPhases = (
+				0E40E039305F90FB00A3C06E /* Sources */,
+				0E40E03A305F90FB00A3C06E /* Frameworks */,
+				0E40E03B305F90FB00A3C06E /* Resources */,
+				A10000233070000000D0C001 /* Embed PlugIns */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A10000253070000000D0C001 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0E40E03F305F90FB00A3C06E /* Launchpod */,
+			);
+			name = Launchpod;
+			packageProductDependencies = (
+				A10000523070000000D0C001 /* Sparkle */,
+			);
+			productName = Launchpod;
+			productReference = 0E40E03D305F90FB00A3C06E /* Launchpod.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0E40E049305F90FD00A3C06E /* LaunchpodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E40E05F305F90FD00A3C06E /* Build configuration list for PBXNativeTarget "LaunchpodTests" */;
+			buildPhases = (
+				0E40E046305F90FD00A3C06E /* Sources */,
+				0E40E047305F90FD00A3C06E /* Frameworks */,
+				0E40E048305F90FD00A3C06E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E40E04C305F90FD00A3C06E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0E40E04D305F90FD00A3C06E /* LaunchpodTests */,
+			);
+			name = LaunchpodTests;
+			productName = LaunchpodTests;
+			productReference = 0E40E04A305F90FD00A3C06E /* LaunchpodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0E40E053305F90FD00A3C06E /* LaunchpodUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E40E062305F90FD00A3C06E /* Build configuration list for PBXNativeTarget "LaunchpodUITests" */;
+			buildPhases = (
+				0E40E050305F90FD00A3C06E /* Sources */,
+				0E40E051305F90FD00A3C06E /* Frameworks */,
+				0E40E052305F90FD00A3C06E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E40E056305F90FD00A3C06E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0E40E057305F90FD00A3C06E /* LaunchpodUITests */,
+			);
+			name = LaunchpodUITests;
+			productName = LaunchpodUITests;
+			productReference = 0E40E054305F90FD00A3C06E /* LaunchpodUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		A10000243070000000D0C001 /* LaunchpodDockTile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000283070000000D0C001 /* Build configuration list for PBXNativeTarget "LaunchpodDockTile" */;
+			buildPhases = (
+				A10000203070000000D0C001 /* Sources */,
+				A10000213070000000D0C001 /* Frameworks */,
+				A10000223070000000D0C001 /* Resources */,
+			);
+			buildRules = (
+			);
+			name = LaunchpodDockTile;
+			productName = LaunchpodDockTile;
+			productReference = A10000103070000000D0C001 /* LaunchpodDockTile.docktileplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E40E035305F90FB00A3C06E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					0E40E03C305F90FB00A3C06E = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					0E40E049305F90FD00A3C06E = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 0E40E03C305F90FB00A3C06E;
+					};
+					0E40E053305F90FD00A3C06E = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 0E40E03C305F90FB00A3C06E;
+					};
+					A10000243070000000D0C001 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+				};
+			};
+			buildConfigurationList = 0E40E038305F90FB00A3C06E /* Build configuration list for PBXProject "Launchpod" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+				"zh-Hant",
+				ja,
+				fr,
+				de,
+				ko,
+				es,
+			);
+			mainGroup = 0E40E034305F90FB00A3C06E;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A10000513070000000D0C001 /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0E40E03E305F90FB00A3C06E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E40E03C305F90FB00A3C06E /* Launchpod */,
+				A10000243070000000D0C001 /* LaunchpodDockTile */,
+				0E40E049305F90FD00A3C06E /* LaunchpodTests */,
+				0E40E053305F90FD00A3C06E /* LaunchpodUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E40E03B305F90FB00A3C06E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		0E40E048305F90FD00A3C06E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		0E40E052305F90FD00A3C06E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		A10000223070000000D0C001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				A10000043070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconColorGrid.imageset/ApplicationIconColorGrid.png in Resources */,
+				A10000053070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconDarkGrid.imageset/ApplicationIconDarkGrid.png in Resources */,
+				A10000063070000000D0C001 /* Launchpod/Assets.xcassets/ApplicationIconRocket.imageset/ApplicationIconRocket.png in Resources */,
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E40E039305F90FB00A3C06E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		0E40E046305F90FD00A3C06E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				A10000333070000000D0C001 /* LaunchpodDockTile.swift in Sources */,
+				A10000343070000000D0C001 /* Launchpod/Shared/Application/ApplicationIconDockContract.swift in Sources */,
+			);
+		};
+		0E40E050305F90FD00A3C06E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				A10000603070000000D0C001 /* CatalogTestSupport.swift in Sources */,
+			);
+		};
+		A10000203070000000D0C001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				A10000313070000000D0C001 /* LaunchpodDockTile.swift in Sources */,
+				A10000023070000000D0C001 /* Launchpod/Shared/Application/ApplicationIconDockContract.swift in Sources */,
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E40E04C305F90FD00A3C06E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E40E03C305F90FB00A3C06E /* Launchpod */;
+			targetProxy = 0E40E04B305F90FD00A3C06E /* PBXContainerItemProxy */;
+		};
+		0E40E056305F90FD00A3C06E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E40E03C305F90FB00A3C06E /* Launchpod */;
+			targetProxy = 0E40E055305F90FD00A3C06E /* PBXContainerItemProxy */;
+		};
+		A10000253070000000D0C001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10000243070000000D0C001 /* LaunchpodDockTile */;
+			targetProxy = A10000083070000000D0C001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E40E05A305F90FD00A3C06E /* Debug configuration for PBXProject "Launchpod" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0E40E05B305F90FD00A3C06E /* Release configuration for PBXProject "Launchpod" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		0E40E05D305F90FD00A3C06E /* Debug configuration for PBXNativeTarget "Launchpod" */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A10000403070000000D0C001 /* Launchpod.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Launchpod.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Launchpod/App/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.joyx.launchpod;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				XROS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Debug;
+		};
+		0E40E05E305F90FD00A3C06E /* Release configuration for PBXNativeTarget "Launchpod" */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A10000403070000000D0C001 /* Launchpod.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Launchpod.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Launchpod/App/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.joyx.launchpod;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				XROS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Release;
+		};
+		0E40E060305F90FD00A3C06E /* Debug configuration for PBXNativeTarget "LaunchpodTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.joyx.LaunchpodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Launchpod.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Launchpod";
+				XROS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Debug;
+		};
+		0E40E061305F90FD00A3C06E /* Release configuration for PBXNativeTarget "LaunchpodTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.joyx.LaunchpodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Launchpod.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Launchpod";
+				XROS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Release;
+		};
+		0E40E063305F90FD00A3C06E /* Debug configuration for PBXNativeTarget "LaunchpodUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.joyx.LaunchpodUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = Launchpod;
+				XROS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Debug;
+		};
+		0E40E064305F90FD00A3C06E /* Release configuration for PBXNativeTarget "LaunchpodUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.joyx.LaunchpodUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = Launchpod;
+				XROS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Release;
+		};
+		A10000263070000000D0C001 /* Debug configuration for PBXNativeTarget "LaunchpodDockTile" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPrincipalClass = LaunchpodDockTile;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.joyx.launchpod.docktile;
+				PRODUCT_NAME = LaunchpodDockTile;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = docktileplugin;
+			};
+			name = Debug;
+		};
+		A10000273070000000D0C001 /* Release configuration for PBXNativeTarget "LaunchpodDockTile" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPrincipalClass = LaunchpodDockTile;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.joyx.launchpod.docktile;
+				PRODUCT_NAME = LaunchpodDockTile;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = docktileplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E40E038305F90FB00A3C06E /* Build configuration list for PBXProject "Launchpod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E40E05A305F90FD00A3C06E /* Debug configuration for PBXProject "Launchpod" */,
+				0E40E05B305F90FD00A3C06E /* Release configuration for PBXProject "Launchpod" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		0E40E05C305F90FD00A3C06E /* Build configuration list for PBXNativeTarget "Launchpod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E40E05D305F90FD00A3C06E /* Debug configuration for PBXNativeTarget "Launchpod" */,
+				0E40E05E305F90FD00A3C06E /* Release configuration for PBXNativeTarget "Launchpod" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		0E40E05F305F90FD00A3C06E /* Build configuration list for PBXNativeTarget "LaunchpodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E40E060305F90FD00A3C06E /* Debug configuration for PBXNativeTarget "LaunchpodTests" */,
+				0E40E061305F90FD00A3C06E /* Release configuration for PBXNativeTarget "LaunchpodTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		0E40E062305F90FD00A3C06E /* Build configuration list for PBXNativeTarget "LaunchpodUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E40E063305F90FD00A3C06E /* Debug configuration for PBXNativeTarget "LaunchpodUITests" */,
+				0E40E064305F90FD00A3C06E /* Release configuration for PBXNativeTarget "LaunchpodUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		A10000283070000000D0C001 /* Build configuration list for PBXNativeTarget "LaunchpodDockTile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000263070000000D0C001 /* Debug configuration for PBXNativeTarget "LaunchpodDockTile" */,
+				A10000273070000000D0C001 /* Release configuration for PBXNativeTarget "LaunchpodDockTile" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A10000513070000000D0C001 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A10000523070000000D0C001 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A10000513070000000D0C001 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 0E40E035305F90FB00A3C06E /* Project object */;
+	validationLevel = 1;
+}

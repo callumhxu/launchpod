@@ -1,0 +1,11 @@
+// Empty update settings make Sparkle unavailable. Release builds supply an HTTPS feed and its
+// matching EdDSA public key from CI.
+LAUNCHPOD_UPDATE_FEED_URL =
+LAUNCHPOD_UPDATE_PUBLIC_ED_KEY =
+
+// Project and social pages linked from About settings; an empty value hides that link.
+// `/$()/` keeps `//` from starting an xcconfig comment.
+LAUNCHPOD_GITHUB_URL = https:/$()/github.com/callumhxu/launchpod
+LAUNCHPOD_X_URL = https:/$()/x.com/callumhxu
+LAUNCHPOD_YOUTUBE_URL = https:/$()/www.youtube.com/@callumhxu
+LAUNCHPOD_TIKTOK_URL = https:/$()/www.tiktok.com/@callumhxu

@@ -1,0 +1,129 @@
+name: Release macOS
+
+# Configure nonsecret settings in scripts/release.conf.
+# Set SPARKLE_PUBLIC_ED_KEY, APPLE_TEAM_ID and DEVELOPER_ID_APPLICATION as Actions secrets so logs mask them.
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: macos-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: xcode-27
+    timeout-minutes: 120
+    environment: macos-release
+    defaults:
+      run:
+        shell: bash
+    env:
+      GH_TOKEN: ${{ github.token }}
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Load release configuration
+        run: |
+          source scripts/release.conf
+          if [ -z "$RELEASE_REPOSITORY" ]; then
+            echo '::error::Set RELEASE_REPOSITORY to OWNER/REPO in scripts/release.conf.'
+            exit 1
+          fi
+          echo "PUBLIC_REPO=$RELEASE_REPOSITORY" >> "$GITHUB_ENV"
+
+      - name: Check whether this version is already published
+        id: release
+        run: |
+          draft=$(gh release list --repo "$PUBLIC_REPO" --limit 1000 --json tagName,isDraft |
+            jq -r --arg tag "$GITHUB_REF_NAME" '.[] | select(.tagName == $tag) | .isDraft')
+          echo "draft=$draft" >> "$GITHUB_OUTPUT"
+          if [ "$draft" = false ]; then
+            echo "Release $GITHUB_REF_NAME is already published; skipping."
+          fi
+
+      - name: Read version and release notes
+        if: steps.release.outputs.draft != 'false'
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Expected a release tag such as v1.0.2; received $GITHUB_REF_NAME."
+            exit 1
+          fi
+          echo "RELEASE_VERSION=$version" >> "$GITHUB_ENV"
+          RELEASE_DIR="$RUNNER_TEMP/launchpod-release"
+          echo "RELEASE_DIR=$RELEASE_DIR" >> "$GITHUB_ENV"
+          mkdir -p "$RELEASE_DIR"
+          awk -v v="$version" '
+            $0 == "## [" v "]" { found=1; next }
+            found && /^## / { exit }
+            found { print }
+          ' CHANGELOG.md > "$RELEASE_DIR/RELEASE_NOTES.md"
+          if ! grep -q '[[:alnum:]]' "$RELEASE_DIR/RELEASE_NOTES.md"; then
+            echo "::warning::No release notes for $GITHUB_REF_NAME in CHANGELOG.md; using the version title."
+            printf 'Launchpod %s\n' "$GITHUB_REF_NAME" > "$RELEASE_DIR/RELEASE_NOTES.md"
+          fi
+
+      - name: Build signed and notarized DMG
+        if: steps.release.outputs.draft != 'false'
+        env:
+          DEVELOPER_ID_CERTIFICATE_BASE64: ${{ secrets.DEVELOPER_ID_CERTIFICATE_BASE64 }}
+          DEVELOPER_ID_CERTIFICATE_PASSWORD: ${{ secrets.DEVELOPER_ID_CERTIFICATE_PASSWORD }}
+          APPLE_API_KEY_P8_BASE64: ${{ secrets.APPLE_API_KEY_P8_BASE64 }}
+          APPLE_API_KEY_ID: ${{ secrets.APPLE_API_KEY_ID }}
+          APPLE_API_ISSUER_ID: ${{ secrets.APPLE_API_ISSUER_ID }}
+          SPARKLE_PRIVATE_ED_KEY: ${{ secrets.SPARKLE_PRIVATE_ED_KEY }}
+          SPARKLE_PUBLIC_ED_KEY: ${{ secrets.SPARKLE_PUBLIC_ED_KEY }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          DEVELOPER_ID_APPLICATION: ${{ secrets.DEVELOPER_ID_APPLICATION }}
+        run: bash scripts/build_macos.sh
+
+      - name: Publish DMG and update feed
+        if: steps.release.outputs.draft != 'false'
+        env:
+          EXISTING_DRAFT: ${{ steps.release.outputs.draft }}
+        run: |
+          if [ "$EXISTING_DRAFT" != true ]; then
+            gh release create "$GITHUB_REF_NAME" --repo "$PUBLIC_REPO" --draft \
+              --title "$GITHUB_REF_NAME" --notes-file "$RELEASE_DIR/RELEASE_NOTES.md"
+          fi
+          gh release upload "$GITHUB_REF_NAME" --repo "$PUBLIC_REPO" --clobber \
+            "$RELEASE_DIR/public/Launchpod-${RELEASE_VERSION}-universal.dmg" "$RELEASE_DIR/public/appcast.xml" \
+            "$RELEASE_DIR/public/SHA256SUMS"
+          gh release edit "$GITHUB_REF_NAME" --repo "$PUBLIC_REPO" --draft=false --prerelease=false \
+            --title "$GITHUB_REF_NAME" --notes-file "$RELEASE_DIR/RELEASE_NOTES.md"
+
+      - name: Update Homebrew cask
+        if: steps.release.outputs.draft != 'false'
+        env:
+          HOMEBREW_TAP_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+        run: |
+          source scripts/release.conf
+          sha=$(shasum -a 256 "$RELEASE_DIR/public/Launchpod-${RELEASE_VERSION}-universal.dmg" | cut -d ' ' -f 1)
+          tap="$RUNNER_TEMP/homebrew-tap"
+          git clone "https://x-access-token:${HOMEBREW_TAP_TOKEN}@github.com/${HOMEBREW_TAP_REPOSITORY}.git" "$tap"
+          mkdir -p "$tap/Casks"
+          sed -e "s|__VERSION__|$RELEASE_VERSION|" -e "s|__SHA256__|$sha|" -e "s|__REPOSITORY__|$RELEASE_REPOSITORY|g" \
+            scripts/launchpod.rb > "$tap/Casks/launchpod.rb"
+          cd "$tap"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Casks/launchpod.rb
+          if ! git diff --cached --quiet; then
+            git commit -m "launchpod $RELEASE_VERSION"
+            git push origin HEAD:main
+          fi
+
+      - name: Clean up signing credentials
+        if: always()
+        run: |
+          security delete-keychain "$RUNNER_TEMP/launchpod-release/private/signing.keychain-db" 2>/dev/null || true
+          rm -rf "$RUNNER_TEMP/launchpod-release/private"
